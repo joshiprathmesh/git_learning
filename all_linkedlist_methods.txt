@@ -1,0 +1,160 @@
+*** ALL LINKED LIST METHODS ***
+
+package Collection;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+
+
+
+class Linkedd
+{
+	
+	public void methods()
+	{
+		
+		LinkedList<Integer> ll=new LinkedList<Integer>(Arrays.asList(33,55,44,33,66,77,88,11,88,99));
+		
+		System.out.print("Default LinkedList :- "+ll);
+		
+		System.out.println("\nget size of LinkedList using 'size' method : "+ll.size());
+		
+		ll.addFirst(100);
+		
+		System.out.println("\n'addFirst' method : "+ll);
+		
+		ll.addLast(300);
+		System.out.println("\n'addLast' method : "+ll);
+		
+		System.out.println("\nuse 'contains' method to check '44' element : "+ll.contains(44));
+		System.out.println("\nuse 'contains' method to check '200' element : "+ll.contains(200));
+		
+		ll.remove(7);
+		
+		System.out.println("\nremoving 6th position element using 'remove' method : "+ll);
+		
+		System.out.println("\nCheck whether the linkedlist is empty or not by using 'isEmpty' method : "+ll.isEmpty());
+		
+		System.out.println("\nusing 'getFirst' method : "+ll.getFirst());
+		System.out.println("\nusing 'getLast' method : "+ll.getLast());
+		System.out.println("\nget any index element by using 'get' method : "+ll.get(4));
+		
+		
+		System.out.println("\nusing 'peek' method we retrive 1st element : "+ll.peek());
+		
+		ll.poll();
+		System.out.println("\nusing 'poll' method we retrive and remove 1st element : "+ll);
+		
+		ll.removeLast();
+		System.out.println("\nusing 'removeLast' method we remove last element : "+ll);
+		
+		ll.remove(5);
+		System.out.println("\nusing 'remove' method we remove element from index position : "+ll);
+		
+		ll.removeFirstOccurrence(33);
+		System.out.println("\nusing 'removeFirstOccurance' method we remove first occurance of element : "+ll);
+		
+		System.out.println("\nPrinting in forward by using List Iterator : ");
+		ListIterator it= ll.listIterator();
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
+		}
+		System.out.println("\nPrinting in reverse by using List Iterator : ");
+		while(it.hasPrevious())
+		{
+			System.out.println(it.previous());
+		}
+		
+		Collections.sort(ll);
+		System.out.println("\nSorting by using 'collections ' class : "+ ll);
+		
+		Collections.sort(ll,Collections.reverseOrder());
+		System.out.println("\nSorting in reverse by using 'collections ' class : "+ ll);
+		
+		
+		
+	}
+
+	
+}
+
+
+
+
+public class Linkedlist
+{
+
+	public static void main(String[] args)
+	{
+
+		Linkedd obj=new Linkedd();
+		obj.methods();
+	}
+
+}
+
+
+## Output ##
+
+
+Default LinkedList :- [33, 55, 44, 33, 66, 77, 88, 11, 88, 99]
+get size of LinkedList using 'size' method : 10
+
+'addFirst' method : [100, 33, 55, 44, 33, 66, 77, 88, 11, 88, 99]
+
+'addLast' method : [100, 33, 55, 44, 33, 66, 77, 88, 11, 88, 99, 300]
+
+use 'contains' method to check '44' element : true
+
+use 'contains' method to check '200' element : false
+
+removing 6th position element using 'remove' method : [100, 33, 55, 44, 33, 66, 77, 11, 88, 99, 300]
+
+Check whether the linkedlist is empty or not by using 'isEmpty' method : false
+
+using 'getFirst' method : 100
+
+using 'getLast' method : 300
+
+get any index element by using 'get' method : 33
+
+using 'peek' method we retrive 1st element : 100
+
+using 'poll' method we retrive and remove 1st element : [33, 55, 44, 33, 66, 77, 11, 88, 99, 300]
+
+using 'removeLast' method we remove last element : [33, 55, 44, 33, 66, 77, 11, 88, 99]
+
+using 'remove' method we remove element from index position : [33, 55, 44, 33, 66, 11, 88, 99]
+
+using 'removeFirstOccurance' method we remove first occurance of element : [55, 44, 33, 66, 11, 88, 99]
+
+Printing in forward by using List Iterator : 
+55
+44
+33
+66
+11
+88
+99
+
+Printing in reverse by using List Iterator : 
+99
+88
+11
+66
+33
+44
+55
+
+Sorting by using 'collections ' class : [11, 33, 44, 55, 66, 88, 99]
+
+Sorting in reverse by using 'collections ' class : [99, 88, 66, 55, 44, 33, 11]
+
+
+
+
+===========================================================================
